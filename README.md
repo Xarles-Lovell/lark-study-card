@@ -18,7 +18,7 @@
 
 ## 这是什么
 
-一套基于 [lark-cli](https://github.com/) 的**工作流模板**（不是某个具体 App）。它把"跟 AI 反复试错才摸索出来的流程"沉淀成了一份操作手册 + 一组脚本，clone 下来照着跑就能复用，不用再从零跟 AI 聊需求。
+一套基于 [lark-cli](https://github.com/larksuite/cli) 的**工作流模板**（不是某个具体 App）。它把"跟 AI 反复试错才摸索出来的流程"沉淀成了一份操作手册 + 一组脚本，clone 下来照着跑就能复用，不用再从零跟 AI 聊需求。
 
 - **输入**：你导出到飞书的课堂记录（妙记/录音转写）+ 课件（DOC 正文 / HTML 幻灯片）
 - **处理**：AI 按知识点归纳，每条配整段课堂原文 + 对应幻灯片图
@@ -35,7 +35,7 @@
 ```bash
 # 1. 装好 lark-cli 并授权（见 lark-cli 文档）
 # 2. 克隆本仓库
-git clone <this-repo> && cd lark-study-card
+git clone https://github.com/Xarles-Lovell/lark-study-card.git && cd lark-study-card
 
 # 3. 配置：复制模板，填入你的 token
 cp scripts/lark/00-env.sh.example scripts/lark/00-env.sh

@@ -8,7 +8,7 @@
 
 ## 前置
 
-- 已装 [lark-cli](https://github.com/...) (v1.0.54+)，并用你的飞书身份授权（`--as user`）
+- 已装 [lark-cli](https://github.com/larksuite/cli) (v1.0.54+)，并用你的飞书身份授权（`--as user`）
 - 已授予所需权限：`docs +search/+fetch/+create/+update`、`drive +download`、`search:docs:read`
 - 本机装有 Chrome/Chromium（截图 HTML 幻灯片用）。路径填在 `00-env.sh` 的 `CHROME_PATH`，留空则自动探测
 - Node.js（跑 `shoot-slides.mjs`）、Python3（提取幻灯片文字，可选）

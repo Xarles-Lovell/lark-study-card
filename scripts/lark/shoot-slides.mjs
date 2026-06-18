@@ -4,8 +4,8 @@
 //
 // Chrome 路径优先级: 环境变量 CHROME_PATH > 各系统常见安装位置自动探测
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
 
 // ---- 定位 Chrome/Chromium ----
 function findChrome() {
@@ -60,10 +60,12 @@ if (slideCount === 0) {
 console.log(`检测到 ${slideCount} 张幻灯片`);
 
 // 为每张幻灯片生成一个只显示该张的临时 HTML，再截图
+// 注意: 临时 HTML 必须写在原 HTML 同目录，否则相对路径引用的图片(<img src="xx.jpg">)会找不到而裂图。
+const htmlDir = dirname(htmlPath);
 for (let i = 0; i < slideCount; i++) {
   const css = `<style>.deck>section{display:none!important}.deck>section:nth-of-type(${i + 1}){display:flex!important}.deck{padding:0!important;gap:0!important}body{background:#0d1b3e}</style>`;
   const injected = html.replace('</head>', css + '</head>');
-  const tmpHtml = resolve(outDir, `_tmp-${i}.html`);
+  const tmpHtml = resolve(htmlDir, `_tmp-${i}.html`);
   writeFileSync(tmpHtml, injected, 'utf-8');
   const outPng = resolve(outDir, `slide-${String(i).padStart(2, '0')}.png`);
   try {
@@ -76,6 +78,8 @@ for (let i = 0; i < slideCount; i++) {
     console.log(`  slide-${String(i).padStart(2, '0')}.png OK`);
   } catch (e) {
     console.error(`  slide ${i} 失败: ${e.message}`);
+  } finally {
+    try { unlinkSync(tmpHtml); } catch {}
   }
 }
 console.log('完成');

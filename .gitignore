@@ -1,0 +1,16 @@
+# 运行时产生的课程数据（绝不上传：含课程原文、课件、截图等版权/隐私内容）
+data/
+
+# 你的真实 token 配置（只提交 .example 模板）
+scripts/lark/00-env.sh
+
+# 飞书登录二维码
+lark_auth_qr.png
+
+# 临时文件
+*.tmp
+**/_tmp-*.html
+
+# 系统/编辑器
+.DS_Store
+node_modules/

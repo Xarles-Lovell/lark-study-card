@@ -1,0 +1,32 @@
+<title>示例课 Day1 学习卡</title>
+<callout emoji="books" background-color="light-blue" border-color="blue">
+<p><b>示例课 Day 1 · Python 入门 — 变量与循环</b></p>
+<p>课堂记录：<a href="https://your-domain.feishu.cn/docx/REPLACE_WITH_RECORD_TOKEN">示例课 Day 1 妙记</a> ｜ 课件(共享文件夹 示例课/Day 1)：<a href="https://your-domain.feishu.cn/docx/REPLACE_WITH_DOC_TOKEN">01 Python入门（DOC版）</a> · <a href="https://your-domain.feishu.cn/file/REPLACE_WITH_HTML_TOKEN">01_Python入门.html（HTML版）</a></p>
+<p>勾掉你已经掌握的，剩下没勾的就是该专注学的。每条知识点下：① 整段课堂原文(标时间区间) ② 对应课件幻灯片图(标页码，若有)。</p>
+</callout>
+
+<h1>一、知识点清单</h1>
+
+<!-- 样板A：有对应 PPT 页的知识点 = 复选框 + 整段原文 callout + (第4步再插)幻灯片图 -->
+<checkbox done="false">变量就是给数据起的名字：用 = 把右边的值绑定到左边的名字上，之后用名字就能取到值</checkbox>
+<callout emoji="speaking_head" background-color="gray" border-color="grey">
+<p><b>📢 课堂原文 03:10~05:42</b></p>
+<p>（这里放整段相关的课堂原文，不是一句话。把老师讲这个知识点时连续的几段发言都包含进来，让用户不用回去翻录音就能看懂来龙去脉。示例：变量你可以理解成一个贴了标签的盒子，等号左边是标签名，右边是放进盒子的东西。下次你喊这个标签名，Python 就把盒子里的东西拿给你……）</p>
+<p>（第二段continues：所以变量名要起得有意义，别人一看就知道里面装的是什么，这是写代码的基本素养。）</p>
+</callout>
+
+<!-- 样板B：无对应 PPT 页的纯口述知识点 = 复选框 + 整段原文 callout，注明无对应页 -->
+<checkbox done="false">命名小技巧：变量名用小写+下划线（snake_case），别用拼音，别用单个字母</checkbox>
+<callout emoji="speaking_head" background-color="gray" border-color="grey">
+<p><b>📢 课堂原文 06:00~07:15（课件无对应页，纯口述）</b></p>
+<p>（这条是老师临场口述、课件里没有对应幻灯片的知识点，所以只放原文、不配图，并在时间区间后注明"课件无对应页，纯口述"。）</p>
+</callout>
+
+<h1>二、作业 &amp; 课堂练习</h1>
+
+<callout emoji="memo" background-color="light-yellow" border-color="yellow">
+<p><b>课堂练习</b>：定义三个变量存你的名字、年龄、城市，再用 print 拼成一句自我介绍。</p>
+</callout>
+<callout emoji="bulb" background-color="light-purple" border-color="purple">
+<p><b>作业</b>：写一个 for 循环打印 1 到 10，并把其中的偶数单独标出来。提交截图到作业群。</p>
+</callout>

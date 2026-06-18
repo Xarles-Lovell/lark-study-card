@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# lark-study-card · 复用变量。复制本文件为 00-env.sh 后填入你自己的 token。
+#   cp scripts/lark/00-env.sh.example scripts/lark/00-env.sh
+# token 会过期，过期就用 `lark-cli docs +search` 重新搜。
+# 用法（被其他脚本 source）: source scripts/lark/00-env.sh
+
+# 当前要处理的 Day 编号（也可在运行脚本时用环境变量覆盖：DAY=4 bash ...）
+export DAY="${DAY:-3}"
+
+# 课堂记录文档 token（你把课程妙记/录音转写导出成的飞书文档）
+# 用 `lark-cli docs +search --query "你的课程 Day N"` 搜，取 owner 为自己、type=DOCX 的 token
+export RECORD_TOKEN=""
+
+# 课件 token，逗号分隔。把该 Day 子文件夹下「全部」课件都填进来（DOCX 能读正文，FILE/.html 用来截图）
+export COURSEWARE_TOKENS=""
+
+# 成品文档要建到的文件夹 token（留空则建到云空间根目录，事后手动拖入文件夹）
+# 在飞书网页打开目标文件夹，从 URL 取 folder token
+export TARGET_FOLDER_TOKEN=""
+
+# 知识库主文档 token（首次用 create-hub.sh 建好后填回来，后续幂等更新用）
+export HUB_DOC_TOKEN=""
+
+# 截图 HTML 课件用的 Chrome/Chromium 可执行文件路径。
+# 留空则 shoot-slides.mjs 会尝试自动探测常见安装位置。
+#   Windows 例: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+#   macOS  例: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+#   Linux  例: "/usr/bin/google-chrome"
+export CHROME_PATH=""

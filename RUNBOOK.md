@@ -127,6 +127,18 @@ AI 通读 `record.md`(口述细节) + `courseware-*.md`(课件) + `slides-text.t
 ```
 (图片不在 XML 里写，因为 create 时还没有图片 token，第4c步再插)
 
+**作业区结构**：作业 & 课堂练习同样用可勾选 `<checkbox>` 作为 todo 标题（带【课堂练习】/【作业】前缀），后接彩色 callout 写详细说明。这样全文档"带方框 ☐ = 要做/要掌握的事"语义一致，作业完成进度也能勾选追踪。
+```xml
+<checkbox done="false">【课堂练习】一句话说清要做什么</checkbox>
+<callout emoji="memo" background-color="light-yellow" border-color="yellow">
+<p><b>课堂练习</b>：详细说明……</p>
+</callout>
+<checkbox done="false">【作业】一句话说清要交什么</checkbox>
+<callout emoji="bulb" background-color="light-purple" border-color="purple">
+<p><b>作业</b>：详细说明……</p>
+</callout>
+```
+
 ### 4b. 创建文档
 ```bash
 bash scripts/lark/create-card.sh data/day$DAY/card.xml

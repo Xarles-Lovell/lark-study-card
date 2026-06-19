@@ -24,9 +24,13 @@
 
 <h1>二、作业 &amp; 课堂练习</h1>
 
+<!-- 作业区结构：每个作业 = ① 可勾选 checkbox(精简todo,带【】前缀) → ② 彩色 callout(详细说明)。
+     这样"作业(可勾选追踪)"和"知识点资料"语义一致,用户能勾掉已完成的作业。 -->
+<checkbox done="false">【课堂练习】定义三个变量存名字/年龄/城市，再用 print 拼成一句自我介绍</checkbox>
 <callout emoji="memo" background-color="light-yellow" border-color="yellow">
 <p><b>课堂练习</b>：定义三个变量存你的名字、年龄、城市，再用 print 拼成一句自我介绍。</p>
 </callout>
+<checkbox done="false">【作业】写 for 循环打印 1~10，并把偶数单独标出来，提交截图到作业群</checkbox>
 <callout emoji="bulb" background-color="light-purple" border-color="purple">
 <p><b>作业</b>：写一个 for 循环打印 1 到 10，并把其中的偶数单独标出来。提交截图到作业群。</p>
 </callout>
